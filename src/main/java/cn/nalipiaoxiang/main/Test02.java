@@ -8,7 +8,6 @@ import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
-
 import org.apache.commons.lang3.StringUtils;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -19,7 +18,7 @@ import cn.nalipiaoxiang.util.MyUtils;
 
 public class Test02 {
 
-	public static Integer threadCount = 30;
+	public static Integer threadCount = 25;
 
 	public static void main(String[] args) throws Exception {
 		System.out.println("程序启动");
@@ -79,11 +78,10 @@ public class Test02 {
 			}
 		}
 		bw.close();
-		while (!executor.isTerminated()) {
-		}
+		executor.shutdown();
 		long t2 = System.currentTimeMillis();
-		System.out.println("执行线程数:"+threadCount+"耗时:"+(t2-t1)+"毫秒");
-		System.out.println("执行线程数:"+threadCount+"耗时:"+(t2-t1)/1000+"秒");
+		System.out.println("执行线程数:" + threadCount + "耗时:" + (t2 - t1) + "毫秒");
+		System.out.println("执行线程数:" + threadCount + "耗时:" + (t2 - t1) / 1000 + "秒");
 
 	}
 

@@ -5,6 +5,7 @@
 	<groupId>cn.nalipiaoxiang</groupId>
 	<artifactId>Reptile</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+
 	<dependencies>
 		<!-- httpclient -->
 		<dependency>
@@ -24,6 +25,16 @@
 			<artifactId>commons-lang3</artifactId>
 			<version>3.8.1</version>
 		</dependency>
+		<!-- gecco -->
+		<dependency>
+			<groupId>com.geccocrawler</groupId>
+			<artifactId>gecco</artifactId>
+			<version>1.3.0</version>
+		</dependency>
+
+
+
+
 	</dependencies>
 
 
