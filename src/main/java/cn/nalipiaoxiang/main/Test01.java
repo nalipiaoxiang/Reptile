@@ -1,4 +1,4 @@
-package cn.nalipiaoxiang.program;
+package cn.nalipiaoxiang.main;
 
 import java.io.BufferedWriter;
 import java.io.FileOutputStream;
