@@ -63,13 +63,13 @@ public class Test02 {
 				System.out.println("执行抓取数:" + count);
 				Article article = (Article) fulture.get(i).get();
 				String title = article.getTitle();
-				String contains = article.getContains();
+				String content = article.getContent();
 				// 对标题校验
 				if (StringUtils.isNotBlank(title)) {
 					bw.write(title);
 					bw.newLine();
 					bw.flush();
-					bw.write(contains);
+					bw.write(content);
 					bw.newLine();
 					bw.flush();
 				} else {

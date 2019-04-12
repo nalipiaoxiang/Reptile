@@ -3,17 +3,17 @@ package cn.nalipiaoxiang.entity;
 public class Article {
 
 	public String title;
-	public String contains;
+	public String content;
 
 	public Article() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public Article(String title, String contains) {
+	public Article(String title, String content) {
 		super();
 		this.title = title;
-		this.contains = contains;
+		this.content = content;
 	}
 
 	public String getTitle() {
@@ -24,17 +24,17 @@ public class Article {
 		this.title = title;
 	}
 
-	public String getContains() {
-		return contains;
+	public String getContent() {
+		return content;
 	}
 
-	public void setContains(String contains) {
-		this.contains = contains;
+	public void setContent(String content) {
+		this.content = content;
 	}
 
 	@Override
 	public String toString() {
-		return "Article [title=" + title + ", contains=" + contains + "]";
+		return "Article [title=" + title + ", content=" + content + "]";
 	}
 
 }
