@@ -18,7 +18,7 @@ import cn.nalipiaoxiang.util.MyUtils;
 
 public class Test02 {
 
-	public static Integer threadCount = 25;
+	public static Integer threadCount = 10;
 
 	public static void main(String[] args) throws Exception {
 		System.out.println("程序启动");
