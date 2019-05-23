@@ -26,16 +26,25 @@ public class Test06 {
 	public static void main(String[] args) throws Exception {
 
 		Document document = Jsoup.connect(url).get();
-//		Elements et = document.select("title");
+		Elements et = document.select("title");
 		Document parse = Jsoup.parse("<a href=/0/675/>666</a>");
 		Elements select = parse.select("a");
 
 		List<Elements> list = new ArrayList<Elements>();
 		loop(select, list);
-		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("123.txt")));
+		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(et.text()+".txt")));
+		int jishuqi =0;
 		for (Elements elements : list) {
+			jishuqi++;
+			System.out.println("计数器:"+jishuqi);
 			String attr = elements.attr("href");
-			bw.write(prefix + attr);
+			Document article = Jsoup.connect(prefix + attr).get();
+			Elements h1 = article.select("h1");
+			bw.write(h1.text().replaceAll("大唐好相公", ""));
+			bw.flush();
+			bw.newLine();
+			String text = article.select("div[id=novelcontent][class=novelcontent]").text();
+			bw.write(text);
 			bw.flush();
 			bw.newLine();
 		}
